@@ -115,7 +115,37 @@ This is where side effects happen:
 - credentials are leased
 - artifacts and structured outcomes are produced
 
-## 3. Why the split matters
+## 3. Technical runtime and data-plane view
+
+This second diagram is closer to how the moving parts integrate technically.
+
+```mermaid
+flowchart LR
+  UI["User UI"] --> APP["App / control-plane facade"]
+  EXT["External MCP clients"] --> OBS["Public API / organization-observer"]
+
+  APP --> RUN["Runner / execution plane"]
+  RUN --> BR["Thin bridge using the same semantic tool surface"]
+  BR --> OBS
+
+  OBS --> DOM["Structured domain APIs"]
+  OBS --> RAG["Knowledge layer / retrieval plane"]
+
+  RUN --> EXE["Executor drivers / sandbox"]
+  EXE --> ART["Artifacts and structured outcomes"]
+  ART --> APP
+  OBS --> APP
+  APP --> UI
+```
+
+The important boundary is that the same semantic surface can serve:
+- external MCP clients
+- internal analyst agents
+- runner-side execution bridges
+
+That reduces duplicated truth between prompts, APIs, and tool contracts.
+
+## 4. Why the split matters
 
 A lot of agent systems blur these boundaries.
 
@@ -127,7 +157,7 @@ That creates hidden failure modes:
 
 This architecture tries to prevent that by keeping each layer legible.
 
-## 4. A practical reading order
+## 5. A practical reading order
 
 If you want the high-level narrative:
 1. `../quick/responsibility-model.md`

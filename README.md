@@ -4,8 +4,14 @@ Patterns and architecture notes for building AI agents that operate from explici
 
 This repository is a docs-first public condensation of production work around governance layers for humans and AI agents.
 
-It keeps the current repository's strongest property intact: you can still understand the thesis quickly.
-But it now also exposes a deeper system model, governance protocols, runtime boundaries, and retrieval/UI architecture for people who want more than positioning.
+The shortest useful summary is:
+- agents should be first-class organizational actors, not prompt wrappers
+- governance and approvals should be system protocols, not chat habits
+- execution should run in a separate, scoped, auditable plane
+- retrieval and rich answers should respect organizational boundaries and source traceability
+
+If that problem space matters to you, start with `docs/quick/`.
+If you want the system model and technical boundaries, go to `docs/deep/`.
 
 ## How to read this repo
 
@@ -63,6 +69,14 @@ The working assumption is that serious delegation inside organizations needs:
 - a separate execution plane with scoped context and audit
 - retrieval that respects organization boundaries and task semantics
 - structured answers that can be rendered natively instead of dumped as free text
+
+## Why read this repo
+
+Read this if you care about:
+- governance-first agent architecture rather than prompt choreography
+- separate control-plane and runner/execution-plane design
+- org-aware retrieval, agentic RAG, and source-backed AI answers
+- structured AI interfaces through `A2UI`, with `AG-UI + A2UI` as the target direction
 
 ## Production-backed ingredients
 
