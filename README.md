@@ -23,11 +23,21 @@ The approach here is to make organizational semantics executable:
 - consent / approval loops
 - auditable handoffs between actors
 
+```mermaid
+flowchart LR
+  A["Responsibility domain"] --> B["Role or circle"]
+  B --> C["Readable policies"]
+  C --> D["Executable boundaries"]
+  D --> E["Tools, approvals, handoffs"]
+  E --> F["Auditable agent behavior"]
+```
+
 ## Repository map
 
 - `docs/responsibility-model.md` — how domains, roles, circles, and policies become agent context
 - `docs/consent-and-policy-loop.md` — how agents and humans coordinate through approvals and policy changes
 - `docs/execution-surface.md` — why the execution plane should stay sandboxed, explicit, and auditable
+- `docs/engineering-workflow-example.md` — an example of how these ideas apply to a multi-agent engineering workflow
 
 ## Who this is for
 
