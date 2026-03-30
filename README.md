@@ -107,6 +107,16 @@ Deep dive:
 - `docs/deep/agentic-rag-and-rich-results.md` — org-aware retrieval, agentic RAG, semantic search, and structured AI UI
 - `docs/deep/implemented-vs-planned.md` — what is production-backed, what is current direction, and what is intentionally omitted
 
+## Companion code repos
+
+These notes have small public code companions that expose isolated implementation slices:
+- [agent-code-playbook-kit](https://github.com/gritsev/agent-code-playbook-kit) — process IR and deterministic runtime playbooks
+- [agent-code-runner-sandbox](https://github.com/gritsev/agent-code-runner-sandbox) — bounded execution primitives, locks, and delivery validation
+- [agent-code-observer-mcp](https://github.com/gritsev/agent-code-observer-mcp) — semantic observer contracts and thin MCP bridging
+- [agent-code-a2ui-contracts](https://github.com/gritsev/agent-code-a2ui-contracts) — rich-answer contracts, compatibility keys, and normalization helpers
+
+The docs explain the architecture story. The `agent-code-*` repos show narrow executable patterns from that story.
+
 ## Who this is for
 
 - founders building AI-native companies
