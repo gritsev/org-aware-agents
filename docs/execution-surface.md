@@ -1,5 +1,7 @@
 # Execution surface
 
+For the deeper public architecture version of this topic, see `runtime-architecture.md`.
+
 ## Separate the control plane from the execution plane
 
 A useful architecture split is:
@@ -40,4 +42,3 @@ A stronger model is not a substitute for:
 - scope enforcement
 - policy checks
 - operator visibility
-

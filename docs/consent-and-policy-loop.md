@@ -1,5 +1,7 @@
 # Consent and policy loop
 
+For the deeper public architecture version of this topic, see `governance-protocols.md`.
+
 ## The problem
 
 When multiple agents operate inside one organization, sooner or later they hit questions that are not purely operational:
@@ -44,4 +46,3 @@ The same loop can serve both:
 ## Practical principle
 
 High-risk ambiguity should create a governance event, not a clever guess.
-

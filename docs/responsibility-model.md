@@ -1,5 +1,7 @@
 # Responsibility model
 
+For the deeper public architecture version of this topic, see `system-model.md`.
+
 ## Why agent context should start from responsibility, not from a giant prompt
 
 In many systems, an agent receives:
@@ -60,4 +62,3 @@ This is a much stronger foundation than "be helpful and do not make mistakes".
 ## A simple rule
 
 Do not ask an agent to act outside a responsibility model that a human in the same system would also understand.
-

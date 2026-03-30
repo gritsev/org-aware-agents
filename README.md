@@ -2,7 +2,25 @@
 
 Patterns and architecture notes for building AI agents that operate from explicit roles, responsibility domains, policies, approvals, and audit trails rather than free-form prompting.
 
-This repository is a docs-first extraction from production work around governance layers for humans and AI agents.
+This repository is a docs-first public condensation of production work around governance layers for humans and AI agents.
+
+It keeps the current repository's strongest property intact: you can still understand the thesis quickly.
+But it now also exposes a deeper system model, governance protocols, runtime boundaries, and retrieval/UI architecture for people who want more than positioning.
+
+## How to read this repo
+
+If you want the short version:
+- `docs/responsibility-model.md`
+- `docs/consent-and-policy-loop.md`
+- `docs/execution-surface.md`
+- `docs/engineering-workflow-example.md`
+
+If you want the deeper public architecture:
+- `docs/system-model.md`
+- `docs/governance-protocols.md`
+- `docs/runtime-architecture.md`
+- `docs/agentic-rag-and-rich-results.md`
+- `docs/implemented-vs-planned.md`
 
 ## Core idea
 
@@ -32,12 +50,44 @@ flowchart LR
   E --> F["Auditable agent behavior"]
 ```
 
+## What is different here
+
+This is not a generic "give the agent better prompts" approach.
+
+The working assumption is that serious delegation inside organizations needs:
+- explicit responsibility domains instead of vague role blur
+- the same operating language for humans and agents
+- policy questions to become governance events
+- a separate execution plane with scoped context and audit
+- retrieval that respects organization boundaries and task semantics
+- structured answers that can be rendered natively instead of dumped as free text
+
+## Production-backed ingredients
+
+The deeper docs in this repository are based on real work around:
+- domain-aware actor models for humans and agents
+- async consent and policy update loops
+- separate runner / execution surfaces for external and internal agents
+- organization-aware retrieval, agentic RAG, and knowledge tools
+- structured AI results through `A2UI`, with `AG-UI + A2UI` as the target platform direction
+
+Some of this is implemented, some is an active architecture direction, and some remains roadmap.
+That split is called out explicitly in `docs/implemented-vs-planned.md`.
+
 ## Repository map
 
-- `docs/responsibility-model.md` — how domains, roles, circles, and policies become agent context
-- `docs/consent-and-policy-loop.md` — how agents and humans coordinate through approvals and policy changes
-- `docs/execution-surface.md` — why the execution plane should stay sandboxed, explicit, and auditable
-- `docs/engineering-workflow-example.md` — an example of how these ideas apply to a multi-agent engineering workflow
+Quick read:
+- `docs/responsibility-model.md` — short thesis on why responsibility should precede prompting
+- `docs/consent-and-policy-loop.md` — short thesis on governance events instead of chat improvisation
+- `docs/execution-surface.md` — short thesis on keeping execution bounded and auditable
+- `docs/engineering-workflow-example.md` — lightweight example of a bounded multi-agent engineering flow
+
+Deep dive:
+- `docs/system-model.md` — domains, roles, circles, actors, shared entities, permission envelopes, handoffs
+- `docs/governance-protocols.md` — async consent, policy change loops, actor participation, and UX projection
+- `docs/runtime-architecture.md` — control plane vs execution plane, runners, leases, artifacts, and trust boundaries
+- `docs/agentic-rag-and-rich-results.md` — org-aware retrieval, agentic RAG, semantic search, and structured AI UI
+- `docs/implemented-vs-planned.md` — what is production-backed, what is current direction, and what is intentionally omitted
 
 ## Who this is for
 
@@ -54,8 +104,20 @@ These notes are influenced by:
 - agentic execution systems with permissions and audit
 - production B2B workflow software
 
+## Scope note
+
+This repository is intentionally not a full internal documentation dump.
+
+It omits:
+- customer-specific workflows and data
+- internal code paths and private infrastructure details
+- secrets, credentials, and deployment specifics
+- parts of the product that are unrelated to the org-aware agent thesis
+
+The goal is not completeness.
+The goal is to publish a coherent public architecture story that still feels technically real.
+
 ## Contact
 
 - LinkedIn: <https://www.linkedin.com/in/agritsev/>
 - Website: <https://gritsevich.com>
-
