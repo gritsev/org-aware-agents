@@ -10,17 +10,19 @@ But it now also exposes a deeper system model, governance protocols, runtime bou
 ## How to read this repo
 
 If you want the short version:
-- `docs/responsibility-model.md`
-- `docs/consent-and-policy-loop.md`
-- `docs/execution-surface.md`
-- `docs/engineering-workflow-example.md`
+- `docs/quick/responsibility-model.md`
+- `docs/quick/consent-and-policy-loop.md`
+- `docs/quick/execution-surface.md`
+- `docs/quick/engineering-workflow-example.md`
+- `docs/quick/support-and-refunds-example.md`
 
 If you want the deeper public architecture:
-- `docs/system-model.md`
-- `docs/governance-protocols.md`
-- `docs/runtime-architecture.md`
-- `docs/agentic-rag-and-rich-results.md`
-- `docs/implemented-vs-planned.md`
+- `docs/deep/system-overview.md`
+- `docs/deep/system-model.md`
+- `docs/deep/governance-protocols.md`
+- `docs/deep/runtime-architecture.md`
+- `docs/deep/agentic-rag-and-rich-results.md`
+- `docs/deep/implemented-vs-planned.md`
 
 ## Core idea
 
@@ -72,22 +74,24 @@ The deeper docs in this repository are based on real work around:
 - structured AI results through `A2UI`, with `AG-UI + A2UI` as the target platform direction
 
 Some of this is implemented, some is an active architecture direction, and some remains roadmap.
-That split is called out explicitly in `docs/implemented-vs-planned.md`.
+That split is called out explicitly in `docs/deep/implemented-vs-planned.md`.
 
 ## Repository map
 
 Quick read:
-- `docs/responsibility-model.md` — short thesis on why responsibility should precede prompting
-- `docs/consent-and-policy-loop.md` — short thesis on governance events instead of chat improvisation
-- `docs/execution-surface.md` — short thesis on keeping execution bounded and auditable
-- `docs/engineering-workflow-example.md` — lightweight example of a bounded multi-agent engineering flow
+- `docs/quick/responsibility-model.md` — short thesis on why responsibility should precede prompting
+- `docs/quick/consent-and-policy-loop.md` — short thesis on governance events instead of chat improvisation
+- `docs/quick/execution-surface.md` — short thesis on keeping execution bounded and auditable
+- `docs/quick/engineering-workflow-example.md` — lightweight example of a bounded multi-agent engineering flow
+- `docs/quick/support-and-refunds-example.md` — concrete example of policy-bounded support automation with financial risk controls
 
 Deep dive:
-- `docs/system-model.md` — domains, roles, circles, actors, shared entities, permission envelopes, handoffs
-- `docs/governance-protocols.md` — async consent, policy change loops, actor participation, and UX projection
-- `docs/runtime-architecture.md` — control plane vs execution plane, runners, leases, artifacts, and trust boundaries
-- `docs/agentic-rag-and-rich-results.md` — org-aware retrieval, agentic RAG, semantic search, and structured AI UI
-- `docs/implemented-vs-planned.md` — what is production-backed, what is current direction, and what is intentionally omitted
+- `docs/deep/system-overview.md` — one-page architecture view across domains, governance, retrieval, runner, and UI
+- `docs/deep/system-model.md` — domains, roles, circles, actors, shared entities, permission envelopes, handoffs
+- `docs/deep/governance-protocols.md` — async consent, policy change loops, actor participation, and UX projection
+- `docs/deep/runtime-architecture.md` — control plane vs execution plane, runners, leases, artifacts, and trust boundaries
+- `docs/deep/agentic-rag-and-rich-results.md` — org-aware retrieval, agentic RAG, semantic search, and structured AI UI
+- `docs/deep/implemented-vs-planned.md` — what is production-backed, what is current direction, and what is intentionally omitted
 
 ## Who this is for
 

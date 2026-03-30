@@ -1,6 +1,6 @@
 # Consent and policy loop
 
-For the deeper public architecture version of this topic, see `governance-protocols.md`.
+For the deeper public architecture version of this topic, see `../deep/governance-protocols.md`.
 
 ## The problem
 

@@ -1,6 +1,6 @@
 # Responsibility model
 
-For the deeper public architecture version of this topic, see `system-model.md`.
+For the deeper public architecture version of this topic, see `../deep/system-model.md`.
 
 ## Why agent context should start from responsibility, not from a giant prompt
 

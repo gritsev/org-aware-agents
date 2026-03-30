@@ -1,6 +1,6 @@
 # Governance protocols
 
-This document is the detailed public version of the thesis in `consent-and-policy-loop.md`.
+This document is the detailed public version of the thesis in `../quick/consent-and-policy-loop.md`.
 
 The central principle is:
 - ambiguity with operational or policy impact should become a governance event

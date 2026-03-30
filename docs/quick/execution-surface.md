@@ -1,6 +1,6 @@
 # Execution surface
 
-For the deeper public architecture version of this topic, see `runtime-architecture.md`.
+For the deeper public architecture version of this topic, see `../deep/runtime-architecture.md`.
 
 ## Separate the control plane from the execution plane
 

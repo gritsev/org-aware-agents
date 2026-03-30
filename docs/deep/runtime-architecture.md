@@ -1,6 +1,6 @@
 # Runtime architecture
 
-This document is the detailed public version of the thesis in `execution-surface.md`.
+This document is the detailed public version of the thesis in `../quick/execution-surface.md`.
 
 The main boundary is:
 - control plane: policy, assignment, approval, audit, operator UX

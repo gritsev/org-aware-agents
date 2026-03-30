@@ -1,6 +1,6 @@
 # System model
 
-This document is the detailed public version of the core thesis in `responsibility-model.md`.
+This document is the detailed public version of the core thesis in `../quick/responsibility-model.md`.
 
 The main design move is simple:
 - humans and agents should operate inside the same organizational language
